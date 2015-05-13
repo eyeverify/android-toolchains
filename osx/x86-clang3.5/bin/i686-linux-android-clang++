@@ -1,0 +1,7 @@
+if [ "$1" != "-cc1" ]; then
+    `dirname $0`/clang35++ -target i686-none-linux-android "$@" 
+    
+else
+    # target/triple already spelled out.
+    `dirname $0`/clang35++ "$@" 
+fi
